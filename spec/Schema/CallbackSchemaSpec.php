@@ -15,6 +15,7 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Sylius\Bundle\SettingsBundle\Schema\CallbackSchema;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
+use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilder;
 use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilderInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -38,9 +39,9 @@ final class CallbackSchemaSpec extends ObjectBehavior
         $this->shouldImplement(SchemaInterface::class);
     }
 
-    function it_uses_callback_to_build_settings(SettingsBuilderInterface $settingsBuilder)
+    function it_uses_callback_to_build_settings(SettingsBuilder $settingsBuilder)
     {
-        $this->beConstructedWith(function (SettingsBuilderInterface $settingsBuilder) {
+        $this->beConstructedWith(function (SettingsBuilder $settingsBuilder) {
             $settingsBuilder->setDefaults(['foo' => 'bar']);
         }, function (){});
 
