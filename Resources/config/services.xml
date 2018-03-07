@@ -32,7 +32,7 @@
             <argument type="service" id="event_dispatcher" />
         </service>
 
-        <service id="sylius.registry.settings_schema" class="Sylius\Component\Registry\ServiceRegistry" lazy="true">
+        <service id="sylius.registry.settings_schema" class="Sylius\Component\Registry\ServiceRegistry" lazy="true" public="true">
             <argument>Sylius\Bundle\SettingsBundle\Schema\SchemaInterface</argument>
             <argument>Settings schema</argument>
         </service>
