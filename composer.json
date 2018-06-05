@@ -24,12 +24,12 @@
 
         "sylius/registry": "^1.0@dev",
         "sylius/resource-bundle": "^1.0@dev",
-        "symfony/framework-bundle": "^3.2"
+        "symfony/framework-bundle": "^3.4|^4.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.2",
-        "symfony/form": "^3.2",
-        "symfony/validator": "^3.2"
+        "symfony/form": "^3.4|^4.0",
+        "symfony/validator": "^3.4|^4.0"
     },
     "config": {
         "bin-dir": "bin"
